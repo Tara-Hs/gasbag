@@ -40,6 +40,8 @@
   background-color: #355985 !important;
   position: relative;
   bottom: 1px;
+  font-weight: bolder;
+  transition: all 2s;
 }
 
 .ce-danger-button {
@@ -76,7 +78,7 @@
   height: 100%;
   width: 100%;
   overflow: scroll;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(245, 241, 241);
 }
 
 .chat-title-container {
@@ -86,13 +88,13 @@
 }
 
 .chat-title {
-  color: #0920a2;
+  color: #000000;
   font-weight: 800;
   font-size: 24px;
 }
 
 .chat-subtitle {
-  color: #1536b8;
+  color: #000000;
   font-weight: 600;
   font-size: 12px;
   padding-top: 4px;
@@ -122,18 +124,19 @@
 }
 
 .message {
+  color: #0e3059;
   padding: 12px;
   font-size: 16px;
   border-radius: 6px;
   max-width: 60%;
+  background-color: rgba(238, 120, 203, 0.344);
 }
 
 .message-image {
   margin-right: 18px;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 7px;
   height: 30vw;
-  /* width: 30vw; */
   max-height: 200px;
   max-width: 200px;
   min-height: 100px;
@@ -192,6 +195,44 @@
   border: 1px solid white;
   padding: 10px;
   cursor: pointer;
+}
+
+.logout-button {
+  position: absolute;
+  right: 0;
+  background-color: #bcc9dc;
+  border: 1px solid #0e3059;
+  border-radius: 6px;
+  padding: 7px;
+  margin-top: 14px;
+  width: 200px;
+  transition: all 0.4s;
+  cursor: pointer;
+  box-shadow: 2px 3px #c1d1e86f;
+}
+
+.logout-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.4s;
+}
+
+.logout-button span:after {
+  content: '\27BE';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.logout-button:hover span {
+  padding-right: 25px;
+}
+.logout-button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 .send-icon {
@@ -277,16 +318,18 @@
   transition: 0.4s;
 }
 .button span:after {
-  content: '\00bb';
+  content: '\27BE';
   position: absolute;
   opacity: 0;
   top: 0;
   right: -20px;
   transition: 0.5s;
 }
+
 .button:hover span {
   padding-right: 25px;
 }
+
 .button:hover span:after {
   opacity: 1;
   right: 0;

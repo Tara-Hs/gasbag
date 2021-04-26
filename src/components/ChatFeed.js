@@ -52,11 +52,22 @@ const ChatFeed = (props) => {
     }
     renderMessages()
 
+    const handleLogout = () => {
+        localStorage.clear();
+        window.location.reload()
+        // console.log('working')
+    }
+
     if(!chat) {
         return "Loading..."
     }
     return (
         <div>
+            <button onClick={handleLogout} className="logout-button">
+                <span>
+                    <strong>Logout</strong>
+                </span>
+            </button>
             <div className="chat-feed">
                 <div className="chat-container">
                     <div className="chat-title">{chat.title}</div>
@@ -67,9 +78,12 @@ const ChatFeed = (props) => {
                     <div style={{ height: '100px' }}/>
                     <div className="message-form-container">
                         <MessageForm {...props} chatId={activeChat}/>
+        
                     </div>
                 </div>
             </div>
+        <div>
+        </div>
         </div>
     )
 }
