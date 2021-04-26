@@ -6,12 +6,16 @@ import { Route, Switch, Link } from 'react-router-dom'
 
 
 const NewUser = () => {
-   const [name, setName] = useState('')
+   const [email, setEmail] = useState('')
    const [username, setUsername] = useState('')
    const [password, setPassword] = useState('')
    const [error, setError] = useState('')
    
    
+   console.log(localStorage)
+   localStorage.setItem('userName', username)
+   localStorage.setItem('email', email)
+   localStorage.setItem('password', password)
    console.log(localStorage)
    const handleSubmit = async (event) => {
         event.preventDefault()
@@ -43,9 +47,9 @@ const NewUser = () => {
                 <h1 className="title">GasBag</h1>
                 <form onSubmit={handleSubmit}>
                     
-                    <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="input" placeholder="name" required/>
-                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="username" required/>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="password" required/>
+                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} className="input" placeholder="Username" required/>
+                    <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} className="input" placeholder="Email" required/>
+                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} className="input" placeholder="Password" required/>
                     <div align="center">
                         <button type="submit" className="button">
                             <span>Create Account</span>
