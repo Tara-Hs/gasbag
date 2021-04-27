@@ -5,10 +5,10 @@ import TheirMessage from './TheirMessage'
 
 const ChatFeed = (props) => {
     // console.log(props)
-    const { chats, activeChat, userName, messages} = props
+    const { chats, activeChat, userName, messages } = props
     const chat = chats && chats[activeChat]
 
-    // console.log(chat, userName, messages)
+    // console.log(messages)
 
     const renderReadReceipts = (message, isMyMessage) => {
         // map over the people that have read the message
@@ -27,11 +27,11 @@ const ChatFeed = (props) => {
 
     const renderMessages = () => {
         const keys = Object.keys(messages);
-
+        // console.log(keys)
         return keys.map((key, index) => {
             const message = messages[key]
-            const lastMessgeKey = index === 0 ? null : keys[index - 1]
-            const isMyMessage = userName === message.sender.userName
+            const lastMessageKey = index === 0 ? null : keys[index - 1]
+            const isMyMessage = userName === message.sender.username
 
             return (
                 <div key={`message_${index}`} style={{ width: '100%' }}>
@@ -39,7 +39,7 @@ const ChatFeed = (props) => {
                         {
                             isMyMessage
                             ? <MyMessage message={message} />
-                            : <TheirMessage message={message} lastMessage={messages[lastMessgeKey]} />
+                            : <TheirMessage message={message} lastMessage={messages[lastMessageKey]} />
                         }
                     </div>
                     <div className="read-receipts" style={{ marginRight: isMyMessage ? '18px' : '0px', marginLeft: isMyMessage ? '0px' : '68px' }}>
@@ -72,7 +72,7 @@ const ChatFeed = (props) => {
                 <div className="chat-container">
                     <div className="chat-title">{chat.title}</div>
                     <div className="chat-subtitle">
-                        Members: {chat.people.map(person => `${person.person.username}-\n`)}
+                        Members: {chat.people.map(person => `${person.person.username}\n`)}
                     </div>
                     {renderMessages()}
                     <div style={{ height: '100px' }}/>

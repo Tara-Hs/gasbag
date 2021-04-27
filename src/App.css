@@ -10,13 +10,12 @@
 }
 
 .ce-chats-container {
-  background-color: #82a5da!important;
+  background-color: #e4e6e9!important;
 }
 
 .ce-active-chat-card {
   background-color: #bcc9dc !important;
   border: 4px solid #bcc9dc !important;
-  border-radius: 10px !important;
   box-shadow: 2px 3px #e0e8f446!important;
 }
 
@@ -25,7 +24,7 @@
 }
 
 .ce-chat-form-container {
-  padding-bottom: 20px !important;
+  padding-bottom: 50px !important;
 }
 
 .ce-text-input {
@@ -55,7 +54,7 @@
 
 .ce-autocomplete-input {
   border-radius: 6px !important;
-  border: 1px solid #3b2a50 !important;
+  border: 1px solid #0e3059 !important;
 }
 
 .ce-autocomplete-options {
@@ -75,9 +74,9 @@
 /* CUSTOM FEED */
 
 .chat-feed {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
   background-color: rgb(245, 241, 241);
 }
 
@@ -88,9 +87,11 @@
 }
 
 .chat-title {
-  color: #000000;
+  color: darkblue;
   font-weight: 800;
   font-size: 24px;
+  padding-top: 10px;
+  padding-left: 5px;
 }
 
 .chat-subtitle {
@@ -98,6 +99,8 @@
   font-weight: 600;
   font-size: 12px;
   padding-top: 4px;
+  padding-left: 5px;
+  padding-bottom: 15px;
 }
 
 .message-row {
@@ -120,7 +123,8 @@
   text-align: center;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 48px;
+  background-size: 60px;
+  
 }
 
 .message {
@@ -129,7 +133,7 @@
   font-size: 16px;
   border-radius: 6px;
   max-width: 60%;
-  background-color: rgba(238, 120, 203, 0.344);
+  font-weight: bold;
 }
 
 .message-image {
@@ -155,13 +159,13 @@
   margin: 1.5px;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 14px;
+  background-size: 20px;
 }
 
 .message-form-container {
   position: absolute;
   bottom: 0px;
-  width: calc(100% - 36px);
+  width: calc(100% - 14px);
   padding: 18px;
   background-color: rgb(240, 240, 240);
 }
@@ -199,7 +203,7 @@
 
 .logout-button {
   position: absolute;
-  right: 0;
+  right: 18px;
   background-color: #bcc9dc;
   border: 1px solid #0e3059;
   border-radius: 6px;
@@ -238,7 +242,6 @@
 .send-icon {
   top: 1px;
   position: relative;
-  transform: rotate(-90deg);
 }
 
 .picture-icon {

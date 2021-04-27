@@ -18,7 +18,7 @@ const MyMessage = ({ message }) => {
     // else, if simple text message, render in div tag as a text message
     return (
         // our message which appears on right side
-        <div className="message" style={{ float: 'right', marginRight: '18px', color: 'white', backgroundColor: '3B2A50' }}>
+        <div className="message" style={{ float: 'right', marginRight: '18px', color: 'white', backgroundColor: 'darkblue' }}>
             {message.text}
         </div>
     )
