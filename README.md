@@ -18,12 +18,6 @@ Password: abcabc
 # Github source code:
 https://github.com/Tara-Hs/gasbag.git
 
-# Install dependencies
-$ npx create-react-app
-$ npm install react-chat-engine
-$ npm install howler
-$ npm install axios
-$ npm install --save @ant-design/icons
 
 # Development
 
@@ -39,4 +33,4 @@ Some of the features that will be updated in future are:
 
 
 ----------------------------------
-
+<img width="816" alt="Screen Shot 2021-04-28 at 1 19 25 am" src="https://user-images.githubusercontent.com/78297664/116267500-ce7fb480-a7bf-11eb-9103-ed4e7bc34e68.png">
