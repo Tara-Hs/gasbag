@@ -61,6 +61,11 @@ const ChatFeed = (props) => {
     if(!chat) {
         return "Loading..."
     }
+
+    // if(chat.last_message.text != )
+    // console.log()
+
+
     return (
         <div>
             <button onClick={handleLogout} className="logout-button">
